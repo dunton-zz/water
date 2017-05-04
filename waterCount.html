@@ -1,0 +1,44 @@
+
+<! DOCTYPE html>
+<head>
+	<title>How many waters have I had today?</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<style type="text/css">
+		.buttons {
+			background-color: aqua;
+			border: 2px solid;
+			border-radius: 25px;
+		}
+
+	</style>
+</head>
+<body>
+	<h3>Water Count!</h3>
+	<div id="waterCount"></div>
+	</br>
+	<div>
+		<button class= "buttons" id="addWater">Add Water</button>
+		<button class="buttons" id="minusWater">Remove Water</button>
+	</div>
+	<script type="text/javascript">
+		
+		var counter=0;
+		$('#waterCount').text(0);
+		$(document).ready(function() {
+
+			$('#addWater').click(function() {
+				counter++;
+
+				$('#waterCount').text(counter);
+			})
+
+			$('#minusWater').click(function(){
+				counter--;
+
+				$('#waterCount').text(counter);
+			})
+		})
+
+	</script>
+</body>
+</html>
